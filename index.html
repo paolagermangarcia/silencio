@@ -17,6 +17,8 @@
     --ink-soft:#4C5A42;
     --clay:#4A6B42;
     --clay-deep:#31502C;
+    --brand-green:#5E8354;
+    --brand-green-dark:#4A6B42;
     --moss:#6D7E53;
     --ochre:#8A9F68;
     --line:#CBD2B7;
@@ -116,7 +118,7 @@
     font-weight:500;
     font-size:14px;
     padding:11px 22px;
-    border-radius:2px;
+    border-radius:999px;
     text-decoration:none;
     display:inline-block;
     border:1px solid transparent;
@@ -124,10 +126,10 @@
     transition:transform .15s ease, box-shadow .15s ease;
   }
   .btn-primary{
-    background:var(--clay);
+    background:var(--brand-green);
     color:var(--card);
   }
-  .btn-primary:hover{background:var(--clay-deep);}
+  .btn-primary:hover{background:var(--brand-green-dark);}
   .btn-ghost{
     border-color:var(--ink);
     color:var(--ink);
@@ -201,10 +203,9 @@
     font-family:'Newsreader', serif;
     font-style:italic;
     font-weight:400;
-    font-size:clamp(15px, 3.2vw, 32px);
+    font-size:clamp(17px, 4.6vw, 32px);
     color:#E6E9D6;
-    max-width:none;
-    white-space:nowrap;
+    max-width:640px;
     margin:22px auto 0;
     line-height:1.45;
   }
@@ -277,6 +278,8 @@
   .fade.in{opacity:1; transform:none;}
 
   /* ---------- BIENFAITS ---------- */
+  #bienfaits .wrap{ text-align:center; }
+  #bienfaits .section-title{ margin-left:auto; margin-right:auto; }
   .benefits-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -289,11 +292,11 @@
   .benefit + .benefit{
     border-left:1px solid var(--line);
   }
-  .benefit .eyebrow{ margin-bottom:16px; }
+  .benefit .eyebrow{ margin-bottom:18px; font-size:16px; }
   .benefit p{
     font-family:'Newsreader', serif;
     font-style:italic;
-    font-size:18px;
+    font-size:26px;
     line-height:1.55;
     color:var(--ink);
     margin:0;
@@ -305,14 +308,14 @@
 
   /* ---------- QUOTE BAND ---------- */
   .quote-band{
-    background:var(--clay);
-    padding:96px 0;
+    background:var(--brand-green);
+    padding:60px 0;
     text-align:center;
     border-bottom:none;
   }
   .quote-band .wrap{ max-width:780px; }
   .quote-band h2{
-    font-size:clamp(28px, 4.4vw, 44px);
+    font-size:clamp(22px, 3.4vw, 34px);
     line-height:1.35;
     font-style:italic;
     font-weight:500;
@@ -320,34 +323,68 @@
   }
 
   /* ---------- PROGRAMME ---------- */
+  #programme .wrap{ text-align:center; }
+  .programme-card{
+    background:var(--brand-green);
+    border-radius:28px;
+    padding:36px 40px 48px;
+    color:#F3F4EA;
+    box-shadow:0 20px 60px rgba(33,43,30,0.18);
+    max-width:680px;
+    margin:0 auto;
+  }
+  .programme-card .eyebrow{ color:#CBD6B0; margin-bottom:8px; }
+  .programme-card .section-title{
+    color:#F8F9F0;
+    margin:0 auto;
+    margin-bottom:6px;
+    text-align:center;
+  }
   .timeline{
-    margin-top:44px;
-    border-top:1px solid var(--line);
+    margin-top:20px;
+    max-width:560px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    border-top:1px solid rgba(255,255,255,0.14);
   }
   .t-row{
     display:grid;
-    grid-template-columns:110px 1fr;
+    grid-template-columns:118px 1fr;
     gap:24px;
-    padding:22px 0;
-    border-bottom:1px solid var(--line);
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,0.14);
   }
   .t-time{
     font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    color:var(--clay-deep);
+    font-size:16px;
+    color:#D8DFC2;
     padding-top:3px;
   }
   .t-title{
     font-family:'Newsreader', serif;
-    font-size:19px;
+    font-size:20px;
+    color:#F8F9F0;
     margin-bottom:4px;
   }
   .t-desc{
-    color:var(--ink-soft);
+    color:#C7CDB0;
     font-size:14.5px;
-    max-width:460px;
+    max-width:400px;
   }
-  @media (max-width:560px){ .t-row{grid-template-columns:1fr;} }
+  .programme-note{
+    margin-top:36px;
+    font-size:13px;
+    color:#B9C1A2;
+    font-style:italic;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  @media (max-width:560px){
+    .t-row{grid-template-columns:1fr; gap:2px;}
+    .programme-card{ padding:48px 24px 44px; border-radius:20px; }
+  }
 
   /* ---------- INFOS PRATIQUES ---------- */
   .info-grid{
@@ -377,6 +414,16 @@
     font-weight:500;
   }
   @media (max-width:760px){ .info-grid{grid-template-columns:1fr;} }
+
+  /* ---------- MOBILE GENERAL ---------- */
+  @media (max-width:600px){
+    .wrap{ padding:0 20px; }
+    .hero{ padding:70px 0 60px; }
+    section{ padding:56px 0; }
+    .hero-ctas{ gap:14px; }
+    .btn{ width:100%; text-align:center; }
+    .hero-ctas .btn-primary{ width:auto; }
+  }
 
   /* ---------- GUIDES ---------- */
   .guides{
@@ -506,12 +553,12 @@
     <div class="wave" id="wave"></div>
 
     <h1>Le bruit s'arrête ici</h1>
-    <h2 class="hero-sub">Une journée en silence pour sortir du mode « faire » et simplement être</h2>
-    <p class="lede">Silencio est une retraite d'un jour pour revenir à soi : méditation guidée, yoga doux et repas en pleine conscience, le tout en silence et sans portable du matin jusqu'au soir. Accessible aux débutants comme aux habitués des retraites en silence.</p>
+    <h2 class="hero-sub">Une journée en silence pour se reconnecter à soi</h2>
+    <p class="lede">Silencio est une journée en silence et sans portable pour celles et ceux qui ressentent le besoin de ralentir et retrouver du calme à l'intérieur. Aucune expérience n'est nécessaire.</p>
 
     <div class="hero-ctas">
-      <a href="#inscription" class="btn btn-primary">Réserver ma place</a>
-      <a href="#programme" class="btn btn-ghost" style="border-color:#EDEFE0; color:#EDEFE0;">Voir le déroulé ↓</a>
+      <a href="#inscription" class="btn btn-primary" style="font-size:16px; padding:15px 30px;">Réserver ma place</a>
+      <a href="#programme" style="color:#EDEFE0; text-decoration:underline; text-underline-offset:4px; font-size:14px;">Voir le programme ↓</a>
     </div>
     <span class="eyebrow" style="margin-top:20px;">26 septembre — Lyon — 20 personnes maximum</span>
   </div>
@@ -557,15 +604,21 @@
   </div>
 </section>
 
+<section class="quote-band">
+  <div class="wrap">
+    <h2 class="fade">Il y a une voix qui n'utilise pas les mots.<br>Écoute. — Rumi</h2>
+  </div>
+</section>
+
 <section id="pourquoi">
   <div class="wrap">
-    <span class="eyebrow fade">Pourquoi une journée de silence</span>
-    <h2 class="section-title fade">Le silence n'est pas vide. Il est plein de tout ce qu'on n'entend plus.</h2>
-    <div class="two-col" style="margin-top:36px;">
-      <div class="body-text fade">
-        <p>Cette journée s'inspire de deux traditions : le jour de silence des retraites MBSR, où l'on apprend à habiter l'instant sans le commenter ; et les retraites silencieuses de l'école Hridaya, dont nous gardons l'exigence et la douceur, condensées ici en une journée accessible même sans expérience de méditation.</p>
+    <div class="two-col">
+      <div class="fade">
+        <span class="eyebrow">Pourquoi une journée de silence</span>
+        <h2 class="section-title">Le silence n'est pas vide.<br>Il est plein de tout ce qu'on n'entend plus.</h2>
       </div>
       <div class="body-text fade">
+        <p>Cette journée s'inspire de deux traditions : le jour de silence des retraites MBSR, où l'on apprend à habiter l'instant sans le commenter ; et les retraites silencieuses de l'école Hridaya, dont nous gardons la profondeur et la douceur, condensées ici en une journée accessible même sans expérience de méditation.</p>
         <p>Ce qu'on ne dit pas assez : le silence n'est pas seulement reposant, il est souvent joyeux. On rit sans un mot. On goûte un plat comme si c'était la première fois. On regarde quelqu'un dans les yeux un peu plus longtemps que d'habitude, et ce n'est pas gênant. C'est ça, Silencio : un endroit où cette légèreté redevient possible.</p>
       </div>
     </div>
@@ -574,50 +627,48 @@
 </section>
 
 <!-- ================= PROGRAMME ================= -->
-<section class="quote-band">
-  <div class="wrap">
-    <h2 class="fade">Quand le bruit s'apaise, quelque chose en nous redevient audible.</h2>
-  </div>
-</section>
-
 <section id="programme">
   <div class="wrap">
-    <span class="eyebrow fade">Le déroulé · 9h – 18h</span>
-    <h2 class="section-title fade">Une journée hors du temps.</h2>
+    <div class="programme-card">
+      <span class="eyebrow fade">9h – 18h</span>
+      <h2 class="section-title fade">Programme</h2>
 
-    <div class="timeline fade">
-      <div class="t-row">
-        <div class="t-time">09h00</div>
-        <div><div class="t-title">Cercle d'ouverture</div><div class="t-desc">On pose une intention, on se dit qui on est — une dernière fois avant le silence.</div></div>
+      <div class="timeline fade">
+        <div class="t-row">
+          <div class="t-time">09h00</div>
+          <div><div class="t-title">Cercle d'ouverture</div><div class="t-desc">On pose une intention, on se dit qui on est — une dernière fois avant le silence.</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-time">09h30</div>
+          <div><div class="t-title">Méditation guidée</div><div class="t-desc">30 minutes, assis, accompagnés.</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-time">10h15</div>
+          <div><div class="t-title">Yoga doux</div><div class="t-desc">Pour arriver dans le corps avant le déjeuner.</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-time">12h30</div>
+          <div><div class="t-title">Déjeuner en silence</div><div class="t-desc">Repas à partager : chacun apporte un plat à partager. On mange ensemble, sans un mot.</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-time">14h00</div>
+          <div><div class="t-title">Temps libre</div><div class="t-desc">Marcher, s'allonger, ne rien faire.</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-time">15h30</div>
+          <div><div class="t-title">Questions par écrit</div><div class="t-desc">Le seul moment où les mots reviennent — sur le papier.</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-time">16h30</div>
+          <div><div class="t-title">Méditation</div><div class="t-desc">30 minutes, pour refermer doucement la journée.</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-time">17h15</div>
+          <div><div class="t-title">Cercle de clôture</div><div class="t-desc">Retour à la parole, ensemble, avant de repartir.</div></div>
+        </div>
       </div>
-      <div class="t-row">
-        <div class="t-time">09h30</div>
-        <div><div class="t-title">Méditation guidée</div><div class="t-desc">30 minutes, assis, accompagnés.</div></div>
-      </div>
-      <div class="t-row">
-        <div class="t-time">10h15</div>
-        <div><div class="t-title">Yoga doux</div><div class="t-desc">Pour arriver dans le corps avant le déjeuner.</div></div>
-      </div>
-      <div class="t-row">
-        <div class="t-time">12h30</div>
-        <div><div class="t-title">Déjeuner en silence</div><div class="t-desc">Bring-and-share : chacun apporte un plat à partager. On mange ensemble, sans un mot.</div></div>
-      </div>
-      <div class="t-row">
-        <div class="t-time">14h00</div>
-        <div><div class="t-title">Temps libre</div><div class="t-desc">Marcher, s'allonger, ne rien faire.</div></div>
-      </div>
-      <div class="t-row">
-        <div class="t-time">15h30</div>
-        <div><div class="t-title">Questions par écrit</div><div class="t-desc">Le seul moment où les mots reviennent — sur le papier.</div></div>
-      </div>
-      <div class="t-row">
-        <div class="t-time">16h30</div>
-        <div><div class="t-title">Méditation</div><div class="t-desc">30 minutes, pour refermer doucement la journée.</div></div>
-      </div>
-      <div class="t-row">
-        <div class="t-time">17h15</div>
-        <div><div class="t-title">Cercle de clôture</div><div class="t-desc">Retour à la parole, ensemble, avant de repartir.</div></div>
-      </div>
+
+      <p class="programme-note fade">Le programme est susceptible d'être légèrement ajusté sur place.</p>
     </div>
   </div>
 </section>
@@ -641,12 +692,12 @@
       </div>
       <div class="info-card">
         <span class="eyebrow">Groupe</span>
-        <strong>15 à 20 personnes</strong>
+        <strong>20 personnes maximum</strong>
         <p>Pour que le silence reste habitable à plusieurs.</p>
       </div>
       <div class="info-card">
         <span class="eyebrow">Repas</span>
-        <strong>Bring-and-share</strong>
+        <strong>Repas à partager</strong>
         <p>Chacun apporte un plat à partager, de préférence végétarien.</p>
       </div>
       <div class="info-card">
@@ -667,20 +718,19 @@
 <section id="guides">
   <div class="wrap">
     <span class="eyebrow fade">Qui guide cette journée</span>
-    <h2 class="section-title fade">Deux personnes, pas une institution.</h2>
 
     <div class="guides fade">
       <div class="guide-card">
         <div class="guide-avatar"></div>
-        <span class="guide-role">Guide</span>
-        <h3>[Prénom Nom]</h3>
-        <p>[Deux lignes sur son parcours : formation, pratique, pourquoi cette journée lui tient à cœur.]</p>
+        <span class="guide-role">Enseignant Hridaya</span>
+        <h3>Frédérick Hardy</h3>
+        <p>Professeur de yoga et de méditation, formé à l'école Hridaya. Depuis 2022, j'anime des retraites en silence en France et à l'Île Maurice. Cette journée est une façon de rendre accessible ce que j'ai reçu.</p>
       </div>
       <div class="guide-card">
         <div class="guide-avatar"></div>
-        <span class="guide-role">Guide</span>
-        <h3>[Prénom Nom]</h3>
-        <p>[Deux lignes sur son parcours : formation, pratique, pourquoi cette journée lui tient à cœur.]</p>
+        <span class="guide-role">Art-thérapeute</span>
+        <h3>Paola Germán García</h3>
+        <p>Art-thérapeute formée au Life Art Process et aux neurosciences. Cette journée est une occasion d'aider les autres à être plus connectés à eux-mêmes, à leur corps, émotions et sensations.</p>
       </div>
     </div>
   </div>
@@ -689,8 +739,7 @@
 <!-- ================= FAQ ================= -->
 <section id="faq">
   <div class="wrap">
-    <span class="eyebrow fade">Questions</span>
-    <h2 class="section-title fade">Ce qu'on nous demande le plus.</h2>
+    <h2 class="section-title fade">Questions fréquentes</h2>
 
     <div class="faq-list fade">
       <details>
@@ -724,11 +773,8 @@
 <!-- ================= CTA FINAL ================= -->
 <section class="cta-final" id="inscription">
   <div class="wrap">
-    <span class="eyebrow fade">Réserver</span>
-    <h2 class="fade">20 places. Une par une, elles se remplissent.</h2>
-    <p class="sub fade">Pas de compte à rebours, pas de fausse urgence — juste un petit groupe, pour de vrai.</p>
-    <a href="#" class="btn btn-primary fade">Réserver ma place — 70€</a>
-    <p class="recap fade">26 septembre 2026 · Lyon · 9h – 18h · 15 à 20 personnes</p>
+    <a href="#" class="btn btn-primary fade" style="font-size:20px; padding:22px 48px;">Réserver ma place — 70€</a>
+    <p class="recap fade">26 septembre 2026 · Lyon · 9h – 18h · 20 personnes maximum</p>
   </div>
 </section>
 
