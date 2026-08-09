@@ -296,7 +296,7 @@
   .benefit p{
     font-family:'Newsreader', serif;
     font-style:italic;
-    font-size:26px;
+    font-size:20px;
     line-height:1.55;
     color:var(--ink);
     margin:0;
@@ -327,7 +327,7 @@
   .programme-card{
     background:var(--brand-green);
     border-radius:28px;
-    padding:36px 40px 48px;
+    padding:36px 40px 28px;
     color:#F3F4EA;
     box-shadow:0 20px 60px rgba(33,43,30,0.18);
     max-width:680px;
@@ -346,14 +346,12 @@
     margin-left:auto;
     margin-right:auto;
     text-align:left;
-    border-top:1px solid rgba(255,255,255,0.14);
   }
   .t-row{
     display:grid;
     grid-template-columns:118px 1fr;
     gap:24px;
-    padding:20px 0;
-    border-bottom:1px solid rgba(255,255,255,0.14);
+    padding:10px 0;
   }
   .t-time{
     font-family:'IBM Plex Mono', monospace;
@@ -373,7 +371,7 @@
     max-width:400px;
   }
   .programme-note{
-    margin-top:36px;
+    margin-top:14px;
     font-size:13px;
     color:#B9C1A2;
     font-style:italic;
@@ -437,19 +435,27 @@
     background:var(--card);
     border:1px solid var(--line);
     padding:28px;
+    text-align:center;
   }
   .guide-avatar{
-    width:52px; height:52px;
+    width:132px; height:132px;
     border-radius:50%;
     background:var(--paper-deep);
     border:1px solid var(--line);
     margin-bottom:16px;
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
   }
-  .guide-card h3{font-size:19px; margin-bottom:6px;}
-  .guide-card p{color:var(--ink-soft); font-size:14.5px; margin:0;}
+  .guide-avatar img{
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+  .guide-card h3{font-size:22px; margin-bottom:6px;}
+  .guide-card p{color:var(--ink-soft); font-size:16.5px; margin:0;}
   .guide-role{
     font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
+    font-size:12.5px;
     letter-spacing:0.08em;
     text-transform:uppercase;
     color:var(--moss);
@@ -458,7 +464,9 @@
   }
 
   /* ---------- FAQ ---------- */
-  .faq-list{ max-width:720px; margin-top:36px; }
+  #faq .wrap{ text-align:center; }
+  #faq .section-title{ margin-left:auto; margin-right:auto; }
+  .faq-list{ max-width:720px; margin-top:36px; margin-left:auto; margin-right:auto; text-align:left; }
   details{
     border-bottom:1px solid var(--line);
     padding:20px 0;
@@ -570,14 +578,12 @@
     <div class="two-col">
       <div class="fade">
         <span class="eyebrow">Avant</span>
-        <h2 class="section-title">On ne s'arrête plus.</h2>
+        <h2 class="section-title">On ne s'arrête plus par un quotidien bien rempli.</h2>
       </div>
       <div class="body-text fade">
-        <p>Des notifications aux réunions, des messages aux décisions : on passe la journée à répondre, produire, se justifier, être disponible. Même le repos se planifie. Même le silence, on finit par le chercher sur Internet.</p>
-        <p>Ce n'est pas seulement une question de fatigue. C'est qu'on a désappris à ne rien avoir à dire — à être là, simplement, sans avoir besoin de le prouver, de le raconter, ou de le partager.</p>
+        <p>Nous passons le journée à faire, produire, planifier, répondre aux sollicitations personnelles ou professionnelles. Même quand on pense déconnecter on est toujours en train de penser à autre chose.</p>
       </div>
     </div>
-    <p class="pull fade">Silencio n'est pas une pause. C'est un endroit où revenir.</p>
   </div>
 </section>
 
@@ -590,7 +596,7 @@
     <div class="benefits-grid fade">
       <div class="benefit">
         <span class="eyebrow">Se déposer</span>
-        <p>Le corps ralentit. La respiration s'approfondit. Il peut relâcher ce qu'il porte depuis trop longtemps.</p>
+        <p>Le corps ralentit. La respiration s'approfondit. Le corps peut relâcher les tensions qu'il porte depuis trop longtemps.</p>
       </div>
       <div class="benefit">
         <span class="eyebrow">S'apaiser</span>
@@ -622,7 +628,6 @@
         <p>Ce qu'on ne dit pas assez : le silence n'est pas seulement reposant, il est souvent joyeux. On rit sans un mot. On goûte un plat comme si c'était la première fois. On regarde quelqu'un dans les yeux un peu plus longtemps que d'habitude, et ce n'est pas gênant. C'est ça, Silencio : un endroit où cette légèreté redevient possible.</p>
       </div>
     </div>
-    <p class="pull fade">On ne se tait pas pour se punir. On se tait pour se retrouver.</p>
   </div>
 </section>
 
@@ -636,39 +641,39 @@
       <div class="timeline fade">
         <div class="t-row">
           <div class="t-time">09h00</div>
-          <div><div class="t-title">Cercle d'ouverture</div><div class="t-desc">On pose une intention, on se dit qui on est — une dernière fois avant le silence.</div></div>
+          <div><div class="t-title">Cercle d'ouverture</div></div>
         </div>
         <div class="t-row">
           <div class="t-time">09h30</div>
-          <div><div class="t-title">Méditation guidée</div><div class="t-desc">30 minutes, assis, accompagnés.</div></div>
+          <div><div class="t-title">Méditation guidée</div></div>
         </div>
         <div class="t-row">
           <div class="t-time">10h15</div>
-          <div><div class="t-title">Yoga doux</div><div class="t-desc">Pour arriver dans le corps avant le déjeuner.</div></div>
+          <div><div class="t-title">Hatha Yoga</div></div>
         </div>
         <div class="t-row">
           <div class="t-time">12h30</div>
-          <div><div class="t-title">Déjeuner en silence</div><div class="t-desc">Repas à partager : chacun apporte un plat à partager. On mange ensemble, sans un mot.</div></div>
+          <div><div class="t-title">Déjeuner en pleine conscience</div></div>
         </div>
         <div class="t-row">
           <div class="t-time">14h00</div>
-          <div><div class="t-title">Temps libre</div><div class="t-desc">Marcher, s'allonger, ne rien faire.</div></div>
+          <div><div class="t-title">Temps libre</div></div>
         </div>
         <div class="t-row">
           <div class="t-time">15h30</div>
-          <div><div class="t-title">Questions par écrit</div><div class="t-desc">Le seul moment où les mots reviennent — sur le papier.</div></div>
+          <div><div class="t-title">Questions par écrit</div></div>
         </div>
         <div class="t-row">
           <div class="t-time">16h30</div>
-          <div><div class="t-title">Méditation</div><div class="t-desc">30 minutes, pour refermer doucement la journée.</div></div>
+          <div><div class="t-title">Méditation</div></div>
         </div>
         <div class="t-row">
           <div class="t-time">17h15</div>
-          <div><div class="t-title">Cercle de clôture</div><div class="t-desc">Retour à la parole, ensemble, avant de repartir.</div></div>
+          <div><div class="t-title">Cercle de clôture</div></div>
         </div>
       </div>
 
-      <p class="programme-note fade">Le programme est susceptible d'être légèrement ajusté sur place.</p>
+      <p class="programme-note fade">*Le programme est susceptible d'être légèrement ajusté sur place.</p>
     </div>
   </div>
 </section>
@@ -693,7 +698,6 @@
       <div class="info-card">
         <span class="eyebrow">Groupe</span>
         <strong>20 personnes maximum</strong>
-        <p>Pour que le silence reste habitable à plusieurs.</p>
       </div>
       <div class="info-card">
         <span class="eyebrow">Repas</span>
@@ -703,7 +707,7 @@
       <div class="info-card">
         <span class="eyebrow">Tarif</span>
         <strong>70€ → 80€</strong>
-        <p>Tarif early bird à 70€, puis 80€.</p>
+        <p>Tarif early bird à 70€ jusqu'au 30 août, puis 80€ à partir du 1er septembre.</p>
       </div>
       <div class="info-card">
         <span class="eyebrow">À prévoir</span>
@@ -721,13 +725,13 @@
 
     <div class="guides fade">
       <div class="guide-card">
-        <div class="guide-avatar"></div>
+        <div class="guide-avatar"><img src="images/frederick-hardy.png" alt="Frédérick Hardy"></div>
         <span class="guide-role">Enseignant Hridaya</span>
         <h3>Frédérick Hardy</h3>
         <p>Professeur de yoga et de méditation, formé à l'école Hridaya. Depuis 2022, j'anime des retraites en silence en France et à l'Île Maurice. Cette journée est une façon de rendre accessible ce que j'ai reçu.</p>
       </div>
       <div class="guide-card">
-        <div class="guide-avatar"></div>
+        <div class="guide-avatar"><img src="images/paola-german-garcia.png" alt="Paola Germán García"></div>
         <span class="guide-role">Art-thérapeute</span>
         <h3>Paola Germán García</h3>
         <p>Art-thérapeute formée au Life Art Process et aux neurosciences. Cette journée est une occasion d'aider les autres à être plus connectés à eux-mêmes, à leur corps, émotions et sensations.</p>
@@ -764,7 +768,7 @@
       </details>
       <details>
         <summary>Jusqu'à quand le tarif early bird ?</summary>
-        <p>[À préciser — date limite ou nombre de places early bird.] Avec un groupe aussi petit, les deux arrivent vite.</p>
+        <p>Jusqu'au 30 août. À partir du 1er septembre, le tarif passe à 80€. Avec un groupe aussi petit, les places partent vite.</p>
       </details>
     </div>
   </div>
@@ -773,7 +777,7 @@
 <!-- ================= CTA FINAL ================= -->
 <section class="cta-final" id="inscription">
   <div class="wrap">
-    <a href="#" class="btn btn-primary fade" style="font-size:20px; padding:22px 48px;">Réserver ma place — 70€</a>
+    <a href="#" class="btn btn-primary fade" style="font-size:20px; padding:22px 48px;">Réserver ma place</a>
     <p class="recap fade">26 septembre 2026 · Lyon · 9h – 18h · 20 personnes maximum</p>
   </div>
 </section>
