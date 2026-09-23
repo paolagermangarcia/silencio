@@ -138,7 +138,23 @@
     padding:10px 20px;
   }
   .btn-ghost:hover{background:var(--ink); color:var(--paper);}
-  @media (max-width:720px){ .nav-links{display:none;} }
+  @media (max-width:720px){
+    .nav-links{display:none;}
+    .nav{
+      display:flex;
+      position:relative;
+      justify-content:flex-end;
+    }
+    .logo{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
+    .nav-right{
+      margin-left:auto;
+    }
+  }
 
   /* ---------- HERO / WAVEFORM ---------- */
   .hero{
@@ -172,7 +188,7 @@
     justify-content:center;
     gap:3px;
     height:80px;
-    margin:0 auto 20px;
+    margin:0 auto 40px;
     max-width:680px;
     opacity:0.9;
   }
@@ -565,13 +581,13 @@
 
     <h1>Le bruit s'arrête ici</h1>
     <h2 class="hero-sub">Une journée en silence pour se reconnecter à soi</h2>
-    <p class="lede">Silencio est une journée en silence et sans portable pour celles et ceux qui ressentent le besoin de ralentir et retrouver du calme à l'intérieur.<br>Aucune expérience n'est nécessaire.</p>
+    <p class="lede">Silencio est une journée en silence et sans portable pour celles et ceux qui ressentent le besoin de ralentir et retrouver du calme à l'intérieur. Aucune expérience n'est nécessaire.</p>
 
     <div class="hero-ctas">
       <a href="https://forms.gle/dpdSQz3Q3ZLY6CG18" class="btn btn-primary" style="font-size:16px; padding:15px 30px;">Réserver ma place</a>
       <a href="#programme" style="color:#EDEFE0; text-decoration:underline; text-underline-offset:4px; font-size:14px;">Voir le programme ↓</a>
     </div>
-    <span class="eyebrow" style="margin-top:20px;">10 octobre — Lyon — 20 personnes maximum</span>
+    <span class="eyebrow" style="margin-top:20px;">10 octobre — Lyon — 12 personnes maximum</span>
   </div>
 </section>
 
@@ -702,7 +718,7 @@
       </div>
       <div class="info-card">
         <span class="eyebrow">Groupe</span>
-        <strong>20 personnes maximum</strong>
+        <strong>12 personnes maximum</strong>
       </div>
       <div class="info-card">
         <span class="eyebrow">Repas</span>
@@ -749,7 +765,7 @@
 <section class="cta-final" id="inscription">
   <div class="wrap">
     <a href="https://forms.gle/dpdSQz3Q3ZLY6CG18" class="btn btn-primary fade" style="font-size:20px; padding:22px 48px;">Réserver ma place</a>
-    <p class="recap fade">10 octobre 2026 · Lyon · 9h – 18h · 20 personnes maximum</p>
+    <p class="recap fade">10 octobre 2026 · Lyon · 9h – 18h · 12 personnes maximum</p>
   </div>
 </section>
 
